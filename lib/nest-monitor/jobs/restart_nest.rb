@@ -1,16 +1,17 @@
-require 'nest-monitor/model/nest_status'
 require 'nest_thermostat'
-require 'json'
 require 'sucker_punch/async_syntax'
 
 module NestMonitor
   module Jobs
-    class SampleNest
+    class RestartNest
       include SuckerPunch::Job
       class << self
         def perform
           nest = NestThermostat::Nest.new(email:ENV['NEST_USER'], password: ENV['NEST_PASSWORD'])
-          NestStatus.new(data: nest.status.to_json).save!
+          target = nest.temp
+          nest.temp = nest.current_temp - 2
+          sleep(30)
+          nest.temp = target 
         end
       end
     end
