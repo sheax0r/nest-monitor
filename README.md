@@ -11,6 +11,8 @@ failing to rise, and then stop and restart the furnace when that happens.
 
 Until that day comes, this app will just restart the furnace every hour.
 
+(*Yes yes, I know I should just get the furnace fixed!*)
+
 ## Run it on Heroku!
 ```bash
 # Create it
