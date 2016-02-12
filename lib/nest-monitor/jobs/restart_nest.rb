@@ -12,7 +12,9 @@ module NestMonitor
           target = nest.temp
           nest.temp = nest.current_temp - 2
           sleep(30)
-          nest.temp = target 
+          nest.temp = target
+          
+          Event.new(type: 'restart-nest').save!
         end
       end
     end

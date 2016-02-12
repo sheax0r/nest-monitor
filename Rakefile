@@ -1,6 +1,6 @@
 $: << 'lib'
 
-require "bundler/gem_tasks"
+require 'nest-monitor/initializers'
 require "sinatra/activerecord/rake"
 
 namespace :db do
