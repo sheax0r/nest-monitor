@@ -1,17 +1,38 @@
 # Nest::Monitor
 
+I have a Nest. I really like it! However, I do not like my furnace.
 
+My furnace sucks, and sometimes it doesn't actually heat the house. The solution is to 
+stop and restart it - but the Nest will never do this, because it (justifiably) believes that
+*leaving the furnace on* is a good way to heat the house.
 
-## Installation
+This app is, someday, going to monitor the temperature, notice that the temperature is 
+failing to rise, and then stop and restart the furnace when that happens.
 
-## Usage
+Until that day comes, this app will just restart the furnace every hour.
 
+## Run it on Heroku!
+```bash
+# Create it
+heroku apps:create nest-monitor
 
-## Development
+# Configure it
+heroku config:set NEST_USER=<your-email>
+heroku config:set NEST_PASSWORD=<your-password>
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+# Scale it
+heroku scale:set web=0,worker=1
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+# Deploy it
+git push heroku master
+
+# Create the database
+heroku addons:create heroku-postgresql:hobby-dev
+heroku run bundle exec rake db:migrate
+
+# Restart it
+heroku restart
+```
 
 ## Contributing
 

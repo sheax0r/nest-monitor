@@ -1,18 +1,3 @@
-PATH
-  remote: .
-  specs:
-    nest-monitor (0.1.0)
-      clockwork
-      dotenv
-      nest_thermostat
-      pg
-      pry
-      rake
-      scrolls
-      sinatra
-      sinatra-activerecord
-      sucker_punch
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -77,9 +62,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.9)
-  nest-monitor!
-  rake (~> 10.0)
+  bundler
+  clockwork
+  dotenv
+  nest_thermostat
+  pg
+  pry
+  rake
+  scrolls
+  sinatra
+  sinatra-activerecord
+  sucker_punch
 
 BUNDLED WITH
    1.11.2
