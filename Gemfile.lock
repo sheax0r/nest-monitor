@@ -3,7 +3,6 @@ PATH
   specs:
     nest-monitor (0.1.0)
       clockwork
-      delayed_job_active_record
       dotenv
       nest_thermostat
       pg
@@ -11,7 +10,7 @@ PATH
       rake
       sinatra
       sinatra-activerecord
-      sucker_punch (~> 2.0)
+      sucker_punch
 
 GEM
   remote: https://rubygems.org/
@@ -36,11 +35,6 @@ GEM
       tzinfo
     coderay (1.1.0)
     concurrent-ruby (1.0.0)
-    delayed_job (4.1.1)
-      activesupport (>= 3.0, < 5.0)
-    delayed_job_active_record (4.1.0)
-      activerecord (>= 3.0, < 5)
-      delayed_job (>= 3.0, < 5)
     dotenv (2.1.0)
     httparty (0.8.3)
       multi_json (~> 1.0)

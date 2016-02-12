@@ -1,1 +1,1 @@
-worker: bundle exec bin/nest-monitor
+worker: bundle exec bin/worker

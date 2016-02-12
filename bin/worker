@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-$: << '../lib'
-require 'nest-monitor'
-
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+require 'nest-monitor/clock'
+Clockwork::run
