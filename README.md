@@ -34,6 +34,18 @@ heroku run bundle exec rake db:migrate
 heroku restart
 ```
 
+
+## Design
+
+I'm using:
+
+* Postgres for my database, because `heroku addons:create heroku-postgresql:hobby-dev` is so dang easy (and really, what other database would you want?)
+* [Clockwork](https://github.com/tomykaira/clockwork) to run scheduled tasks.
+* [Sucker Punch](https://github.com/brandonhilkert/sucker_punch) for running jobs. Using a redis-based system like Resque or Sidekiq is overkill for this one, none of my jobs are all that important.
+* [Sinatra](https://github.com/sinatra/sinatra). Well, okay, there's no *actual web interface* yet. But when there is, I'll use sinatra!
+* [Pry](https://github.com/pry/pry) for the console, because it's better than IRB.
+* ActiveRecord because I'm used to it, and it does what I want it to.
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/nest-monitor/fork )
