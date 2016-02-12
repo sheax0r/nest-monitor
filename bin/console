@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 $: << File.join(File.dirname(__FILE__), '..', 'lib')
 require "bundler/setup"
-require "nest-monitor"
+require 'nest-monitor/model'
+require 'nest-monitor/jobs'
+require 'nest-monitor/app'
 require 'nest-monitor/initializers'
 
 # You can add fixtures and/or initialization code here to make experimenting
