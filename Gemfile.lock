@@ -8,6 +8,7 @@ PATH
       pg
       pry
       rake
+      scrolls
       sinatra
       sinatra-activerecord
       sucker_punch
@@ -56,6 +57,7 @@ GEM
     rack-protection (1.5.3)
       rack
     rake (10.5.0)
+    scrolls (0.3.8)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)

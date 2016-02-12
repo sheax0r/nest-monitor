@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
 $: << File.join(File.dirname(__FILE__), '..', 'lib')
+require 'nest-monitor/initializers'
 require 'nest-monitor/clock'
+
 Clockwork::run
+

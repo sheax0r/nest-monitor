@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
 
-    
+
   spec.add_dependency 'clockwork'
   spec.add_dependency 'dotenv'
   spec.add_dependency 'nest_thermostat' 
@@ -39,4 +39,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'sinatra'
   spec.add_dependency 'sinatra-activerecord'
   spec.add_dependency 'sucker_punch'
+  spec.add_dependency 'scrolls'
 end
