@@ -1,3 +1,4 @@
+require 'nest-monitor/model/event'
 require 'nest_thermostat'
 require 'sucker_punch'
 require 'scrolls'
